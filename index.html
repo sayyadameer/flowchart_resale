@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Resale Flowchart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.2/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ticket Resale Website Flowchart</h1>
+    <div class="mermaid">
+        graph TD
+            A[User Visits Website] --> B[Login/Signup]
+            B -->|New User| C[Create Account]
+            B -->|Existing User| D[Login]
+            C --> D
+            D --> E[Dashboard]
+            E --> F[Browse Events]
+            F --> G[Select Event]
+            G --> H[View Tickets]
+            H -->|Buy Ticket| I[Enter Payment Details]
+            I --> J[Confirm Purchase]
+            J --> K[Receive e-Ticket]
+            H -->|Sell Ticket| L[Enter Ticket Details]
+            L --> M[Set Price & Availability]
+            M --> N[Publish Listing]
+            N --> O[Buyer Views Listing]
+            O --> I
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
